@@ -29,12 +29,12 @@ class ShowCityOfWeatherState extends ConsumerWidget {
                 textOfContent:
                     ref.watch(currentCityOfWeatherProvider)?.location?.country),
             RowInfo(
-                title: "Country:",
+                title: "Day:",
                 textOfContent: ref.watch(currentCityOfWeatherProvider) != null
                     ? CustomFunctions.dayName(DateTime.parse(ref
                             .watch(currentCityOfWeatherProvider)!
                             .location!
-                            .localtime!)
+                            .localtime!.substring(0,10))
                         .weekday
                         .toString())
                     : ''),

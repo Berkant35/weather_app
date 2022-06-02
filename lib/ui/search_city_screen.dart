@@ -64,6 +64,12 @@ class LandingPage extends ConsumerWidget {
         ),
         TextFormField(
           controller: controller,
+          onChanged: (value){
+
+          },
+          onEditingComplete: (){
+            controller.text = controller.text;
+          },
           decoration: InputDecoration(
             hoverColor: Colors.red,
             suffixIcon: const Icon(Icons.search),
@@ -91,7 +97,6 @@ class LandingPage extends ConsumerWidget {
         ref.watch(loginButtonStateProvider) != LoadingStates.loading
             ? CustomElevatedButton(
           onPressed: () async {
-            debugPrint('Current Text ${controller.text}');
             ref
                 .read(currentCityOfWeatherProvider.notifier)
                 .changeCurrentCity(null);
@@ -116,10 +121,8 @@ class LandingPage extends ConsumerWidget {
         ),
         CustomElevatedButton(
           onPressed: () async {
-
             NavigationService.instance.navigateToPage(
                 path: NavigationConstants.foreCastOfCity);
-
           },
           inButtonWidget: CustomText(
             text: 'Hava Tahminleri',
