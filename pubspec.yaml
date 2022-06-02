@@ -1,0 +1,80 @@
+name: worem
+description: This app help for language
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #languages
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+
+  #http
+  dio: ^4.0.6
+
+  #Responsive
+  sizer: ^2.0.15
+
+  #image
+  dots_indicator: ^2.1.0
+
+  #json_serializable:
+  json_serializable: ^6.1.5
+  json_annotation: ^4.0.1
+
+  #state managment
+  flutter_riverpod: ^1.0.3
+  state_notifier: ^0.7.2+1
+
+  #firebase libs
+  firebase_core: ^1.14.1
+  cloud_firestore: ^3.1.13
+  firebase_storage: ^10.2.15
+
+  #Animations
+  lottie: ^1.3.0
+  flutter_svg: ^1.0.3
+
+  cupertino_icons: ^1.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.1.7
+  flutter_lints: ^1.0.1
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  assets:
+    - assets/svg/
+    - assets/weather/
+
+  fonts:
+    - family: AlegreyaSans
+      fonts:
+        - asset: assets/font/algerya/AlegreyaSans-Black.ttf
+        - asset: assets/font/algerya/AlegreyaSans-BlackItalic.ttf
+        - asset: assets/font/algerya/AlegreyaSans-Bold.ttf
+        - asset: assets/font/algerya/AlegreyaSans-BoldItalic.ttf
+        - asset: assets/font/algerya/AlegreyaSans-ExtraBold.ttf
+        - asset: assets/font/algerya/AlegreyaSans-ExtraBoldItalic.ttf
+        - asset: assets/font/algerya/AlegreyaSans-Italic.ttf
+        - asset: assets/font/algerya/AlegreyaSans-Medium.ttf
+        - asset: assets/font/algerya/AlegreyaSans-MediumItalic.ttf
+        - asset: assets/font/algerya/AlegreyaSans-Regular.ttf
+        - asset: assets/font/algerya/AlegreyaSans-Thin.ttf
+        - asset: assets/font/algerya/AlegreyaSans-ThinItalic.ttf
+
+    - family: ConcertOne
+      fonts:
+        - asset: assets/font/ConcertOne-Regular.ttf
